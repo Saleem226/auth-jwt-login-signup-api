@@ -1,0 +1,15 @@
+<div class="container">
+
+    <nav class="navbar navbar-light bg-light justify-content-between">
+        <a class="navbar-brand">HOME-SITE</a>
+        <form class="form-inline">
+            <% if (user){ %> 
+            <h2><%= user.email %></h2>
+            <a href="/logout" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">logout</a>
+            <% }else{ %>
+            <a href="/signup" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">signup</a>
+            <a href="/login" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">signin</a>
+            <% } %>
+        </form>
+    </nav>
+</div>
