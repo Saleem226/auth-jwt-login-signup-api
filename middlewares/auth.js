@@ -25,6 +25,7 @@ const checkUser = (req, res, next) => {
         jwt.verify(token, 'auth project secret', async (err, decodedToken) => {
             if (err) {
                 res.locals.user = null
+                console.log("user is null");
                 next()
             } else {
                 try {
@@ -39,6 +40,7 @@ const checkUser = (req, res, next) => {
         })
     } else {
         res.locals.user = null
+        console.log("user is null");
         next()
     }
 }
